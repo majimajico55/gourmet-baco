@@ -12,9 +12,8 @@ $(async function() {
   let data = await getData(`data/${region}/datalist.json`);
 
   if (!data || !Array.isArray(data)) {
-    // データが取得できなかった場合
-    // および、取得したデータが配列でない場合、何もしない
-    return;
+    // TODO: エラー画面に飛ばす
+    throw new Error();
   }
 
   // テンプレート取得
