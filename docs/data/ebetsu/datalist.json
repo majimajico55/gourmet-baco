@@ -1,0 +1,34 @@
+[
+  {
+    "dir": "toriton",
+    "title": "江別のトリトン",
+    "category": "gourmet",
+    "description": "ネタが大きい！美味しい！！！",
+    "author": "@majimajico55",
+    "thumbnail": "toriton2.jpg"
+  },
+  {
+    "dir": "seicomart",
+    "title": "セイコーマート",
+    "category": "store",
+    "description": "ホットシェフは強い味方です",
+    "author": "@majimajico55",
+    "thumbnail": "OudcSFFt_400x400.jpg"
+  },
+  {
+    "dir": "kawai-cafe",
+    "title": "可愛井カフェ",
+    "category": "gourmet",
+    "description": "SUNABACO EBETSUそばのトライアルのところにやってくるカワイイキッチンカー。カワイイスイーツがいろいろあります。",
+    "author": "@majimajico55",
+    "thumbnail": "kawaii_cafe.png"
+  },
+  {
+    "dir": "butaking",
+    "title": "ブタキング大麻店",
+    "category": "gourmet",
+    "description": "ヤサイニンニクアブラカラメ！",
+    "author": "@majimajico55",
+    "thumbnail": "butaking.jpg"
+  }
+]
