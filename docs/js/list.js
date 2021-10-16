@@ -1,50 +1,21 @@
-/** =======================
- * URLパラメータ取得処理
- * ======================= */
-const getParams = function() {
-
-  // URLパラメータから対象リージョンを取得
-  const url = window.location.href;
-  const regex = new RegExp("[?&]region(=([^&#]*)|&|#|$)");
-  return regex.exec(url);
-}
-
-/** =======================
- * データ取得処理
- * ======================= */
-const getData = async function() {
+$(async function() {
 
   // URLパラメータを取得
-  const results = getParams();
+  const region = getParams("region");
 
-  if (!results || !results[2]) {
+  if (!region) {
     // TODO: エラー画面に飛ばす
     throw new Error();
   }
 
-  const region = results[2];
-
-  // 一覧データ取得
-  const fileData = await fetch(`data/${region}/datalist.json`)
-    .then(response => response.text());
-
-  return JSON.parse(fileData);
-};
-
-$(async function() {
-
   // データ取得
-  let data = await getData();
+  let data = await getData(`data/${region}/datalist.json`);
 
   if (!data || !Array.isArray(data)) {
     // データが取得できなかった場合
     // および、取得したデータが配列でない場合、何もしない
     return;
   }
-
-  // URLパラメータを取得
-  const results = getParams();
-  const region = results[2];
 
   // テンプレート取得
   const template = $($("template").html());
@@ -67,6 +38,10 @@ $(async function() {
     } else {
       _template.find("i").addClass("fas fa-question");
     }
+
+    // 遷移先URLを設定
+    _template.find("a").attr("href", `detail.html?region=${region}&dir=${item.dir}`);
+
 
     // 子要素として追加
     $("#list").append(_template);
