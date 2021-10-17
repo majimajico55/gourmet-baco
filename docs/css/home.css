@@ -40,24 +40,6 @@ body{
 	}
 }
 
-.con_head{
-	width: 1500px;
-	padding:0 15px;
-	margin: 0 auto;
-	animation: ani02 5.5s;
-}
-
-header {
-	height: 70px;
-	width: 100%;
-	background-color: rgba(255,255,255,0.9);
-	position: fixed;
-	top: 0;
-   
-	z-index: 10;
-	
-
-}
 li {
 	list-style: none;
 }
@@ -66,76 +48,11 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
-.logo {
-	width: 124px;
-	float: left;
-	margin: 5px 20px;
-}
-.logo img{
-	height: 60px;
-}
-.head_list a{
-	float:right;
-	color:rgba(255,255,255,0.3);
-	transition:all 0.5s;
-	text-align: center;
-	margin: 0px 0px;
-	line-height: 70px;
-	padding:0 10px;
-	color: rgb(37, 37, 37);
-	display: block;
-}
-.head_list a:hover{
-	background-color: rgba(0,255,255,0.5);
-}
-
-header ul{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-}
-
-header li{
-    color: #acacac;
-    width: 25%;
-    line-height: 60px;
-    transition:0.2s;
-}
-
-header li:hover{
-    color: #111;
-}
 
 h1 {
 
     color: skyblue;
 }
-
-.heading07 {
-	position: relative;
-	padding-top: 50px;
-	padding-left: 30px;
-	font-size: 26px;
-}
-
-.heading07 span {
-	position: relative;
-	z-index: 2;
-}
-
-.heading07::before {
-	content: attr(data-en);
-	position: absolute;
-	transform: rotate(-5deg);
-	top: 20px;
-	left: 0;
-	color: rgba(224,66,114,0.6);
-	font-size: 40px;
-	font-weight: 200;
-	font-family: luxus-brut, cursive;
-	font-style: italic;
-}
-
 
 /*=============== レイアウトのためのCSS =================*/
 
