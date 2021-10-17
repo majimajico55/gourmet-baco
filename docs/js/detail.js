@@ -33,7 +33,8 @@ $(function() {
     $(".description").text(data.description);
     $(".descriptionDetail").text(data.descriptionDetail);
     $(".author").text(data.author);
-    $("#btnBack").attr("href", `list.html?region=${region}`)
+    $(".author").attr("href", `https://twitter.com/${data.author.substring(1)}`);
+    $("#btnBack").attr("href", `list.html?region=${region}`);
 
     // カルーセルに画像を追加
     for (const [index, item]  of data.images.entries()) {
