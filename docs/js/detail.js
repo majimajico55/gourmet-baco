@@ -16,36 +16,48 @@ $(function() {
     const dir = getParams("dir");
 
     if (!region || !dir) {
-      // TODO: エラー画面に飛ばす
-      throw new Error();
+      // エラー画面に飛ばす
+      window.location.href = "error.html";
     }
 
     // データ取得
     let data = await getData(`data/${region}/${dir}/data.json`);
 
     if (!data) {
-      // TODO: エラー画面に飛ばす
-      throw new Error();
+      // エラー画面に飛ばす
+      window.location.href = "error.html";
     }
 
+    if (!data.title) {
+      // エラー画面に飛ばす
+      window.location.href = "error.html";
+    }
+
+
+    // テンプレート取得
+    const template = $($("template").html());
+
     // 取得したデータをテンプレートに設定
-    $(".title").text(data.title);
-    $(".description").text(data.description);
-    $(".descriptionDetail").text(data.descriptionDetail);
-    $(".author").text(data.author);
-    $(".author").attr("href", `https://twitter.com/${data.author.substring(1)}`);
-    $("#btnBack").attr("href", `list.html?region=${region}`);
+    template.find(".title").text(data.title);
+    template.find(".description").text(data.description);
+    template.find(".descriptionDetail").text(data.descriptionDetail);
+    template.find(".author").text(data.author);
+    template.find(".author").attr("href", `https://twitter.com/${data.author.substring(1)}`);
+    template.find("#btnBack").attr("href", `list.html?region=${region}`);
 
     // カルーセルに画像を追加
     for (const [index, item]  of data.images.entries()) {
-      const template = $('<div class="carousel-item"><img src="" class="d-block w-100"></div>');
+      const carouselTemplate = $('<div class="carousel-item"><img src="" class="d-block w-100"></div>');
 
-      template.find("img").attr("src", `data/${region}/${dir}/${item}`);
+      carouselTemplate.find("img").attr("src", `data/${region}/${dir}/${item}`);
       if (index === 0) {
-        template.addClass("active");
+        carouselTemplate.addClass("active");
       }
-      $("#carouselItem").append(template);
+      template.find("#carouselItem").append(carouselTemplate);
     }
+
+    // 要素を追加
+    $(".detail").append(template);
 
     // 地図表示領域の高さ設定
     setMapHeight();

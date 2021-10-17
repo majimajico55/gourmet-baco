@@ -10,16 +10,16 @@ $(async function() {
   const region = getParams("region");
 
   if (!region) {
-    // TODO: エラー画面に飛ばす
-    throw new Error();
+    // エラー画面に飛ばす
+    window.location.href = "error.html";
   }
 
   // データ取得
   let data = await getData(`data/${region}/datalist.json`);
 
   if (!data || !Array.isArray(data)) {
-    // TODO: エラー画面に飛ばす
-    throw new Error();
+    // エラー画面に飛ばす
+    window.location.href = "error.html";
   }
 
   // テンプレート取得
@@ -62,8 +62,8 @@ $(async function() {
   }
 
   if (!isAppend) {
-    // TODO: エラー画面に飛ばす
-    throw new Error();
+    // エラー画面に飛ばす
+    window.location.href = "error.html";
   }
 
 });

@@ -34,7 +34,22 @@
 
   // 一覧データ取得
   const fileData = await fetch(url)
-    .then(response => response.text());
+    .then(response => {
+
+      if (response.status >= 400) {
+        return null;
+      }
+
+      return response.text();
+    })
+    .catch(error => {
+      console.error(error);
+      return null;
+    });
+
+  if (!fileData) {
+    return null;
+  }
 
   return JSON.parse(fileData);
 };
