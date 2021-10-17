@@ -1,5 +1,11 @@
 $(async function() {
 
+  // ヘッダーの高さ取得
+  const headerHeight = $("header").height();
+
+  // コンテナに対してマージントップ設定
+  $(".container").css("margin-top", headerHeight + 30);
+
   // URLパラメータを取得
   const region = getParams("region");
 
