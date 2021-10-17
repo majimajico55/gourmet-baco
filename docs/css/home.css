@@ -1,0 +1,188 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll; /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: #ffffff;
+
+}
+@keyframes ani01 {
+	0%{
+		opacity:0.0;
+	}
+	20% {
+		opacity:0.0;
+	}
+	80% {
+		opacity:1.0;
+	}
+}
+@keyframes ani02 {
+	0%{
+		opacity:0.0;
+	}
+	60% {
+	opacity:0.0;
+	}
+	100% {
+	opacity:1.0;
+	}
+}
+
+.con_head{
+	width: 1500px;
+	padding:0 15px;
+	margin: 0 auto;
+	animation: ani02 5.5s;
+}
+
+header {
+	height: 70px;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+	position: fixed;
+	top: 0;
+   
+	z-index: 10;
+	
+
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+.logo {
+	width: 124px;
+	float: left;
+	margin: 5px 20px;
+}
+.logo img{
+	height: 60px;
+}
+.head_list a{
+	float:right;
+	color:rgba(255,255,255,0.3);
+	transition:all 0.5s;
+	text-align: center;
+	margin: 0px 0px;
+	line-height: 70px;
+	padding:0 10px;
+	color: rgb(37, 37, 37);
+	display: block;
+}
+.head_list a:hover{
+	background-color: rgba(0,255,255,0.5);
+}
+
+header ul{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+header li{
+    color: #acacac;
+    width: 25%;
+    line-height: 60px;
+    transition:0.2s;
+}
+
+header li:hover{
+    color: #111;
+}
+
+h1 {
+
+    color: skyblue;
+}
+
+.heading07 {
+	position: relative;
+	padding-top: 50px;
+	padding-left: 30px;
+	font-size: 26px;
+}
+
+.heading07 span {
+	position: relative;
+	z-index: 2;
+}
+
+.heading07::before {
+	content: attr(data-en);
+	position: absolute;
+	transform: rotate(-5deg);
+	top: 20px;
+	left: 0;
+	color: rgba(224,66,114,0.6);
+	font-size: 40px;
+	font-weight: 200;
+	font-family: luxus-brut, cursive;
+	font-style: italic;
+}
+
+
+/*=============== レイアウトのためのCSS =================*/
+
+a{
+  color:#333;
+}
+
+.svganimeblock{
+  margin:100px auto;
+  text-align: center;
+}
+
+p{margin:20px 0 0 0;}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*SVGの横幅*/
+.svganimeblock{
+  max-width:600px;
+  width:100%;
+}
+
+/*SVGの可変*/
+.svganimeblock svg{
+  width:100%;
+}
+
+/*アニメーション前のパスの指定*/
+.svganimeblock svg path {
+    fill-opacity: 0;/*最初は透過0で見えない状態*/
+    transition: fill-opacity 1s;/*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: #333;/*塗りがない状態*/
+    stroke: #333;/*線の色*/
+  }
+
+/*アニメーション後に.doneというクラス名が付与された時のパスの指定*/
+.svganimeblock svg.done path{
+    fill: none;/*塗りの色*/
+    fill-opacity: 1;/*透過1で見える状態*/
+    stroke: #333;/*線の色なし*/
+  }
+
+#top-logo {
+	animation: ani01 5s;
+
+  }
+#scroll {
+	animation: ani02 5.5s;
+
+  }
