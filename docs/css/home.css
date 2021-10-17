@@ -28,6 +28,7 @@ body{
 		opacity:1.0;
 	}
 }
+
 @keyframes ani02 {
 	0%{
 		opacity:0.0;
@@ -37,6 +38,20 @@ body{
 	}
 	100% {
 	opacity:1.0;
+	}
+}
+
+@keyframes ani03 {
+	0% {
+		opacity: 0.0;
+	}
+
+	60% {
+		opacity: 8.0;
+	}
+
+	100% {
+		opacity: 1.0;
 	}
 }
 
@@ -70,36 +85,90 @@ p{margin:20px 0 0 0;}
 /*=============== SVGアニメーション内の指定 =================*/
 
 /*SVGの横幅*/
-.svganimeblock{
-  max-width:600px;
-  width:100%;
+.svganimeblock {
+	max-width: 600px;
+	width: 100%;
 }
 
 /*SVGの可変*/
-.svganimeblock svg{
-  width:100%;
+.svganimeblock svg {
+	width: 100%;
 }
 
 /*アニメーション前のパスの指定*/
 .svganimeblock svg path {
-    fill-opacity: 0;/*最初は透過0で見えない状態*/
-    transition: fill-opacity 1s;/*カラーがつく際のアニメーション0.5秒で変化*/
-    fill: #333;/*塗りがない状態*/
-    stroke: #333;/*線の色*/
-  }
+	fill-opacity: 0;
+	/*最初は透過0で見えない状態*/
+	transition: fill-opacity 1s;
+	/*カラーがつく際のアニメーション0.5秒で変化*/
+	fill: #333;
+	/*塗りがない状態*/
+	stroke: #333;
+	/*線の色*/
+}
 
 /*アニメーション後に.doneというクラス名が付与された時のパスの指定*/
-.svganimeblock svg.done path{
-    fill: none;/*塗りの色*/
-    fill-opacity: 1;/*透過1で見える状態*/
-    stroke: #333;/*線の色なし*/
-  }
+.svganimeblock svg.done path {
+	fill: none;
+	/*塗りの色*/
+	fill-opacity: 1;
+	/*透過1で見える状態*/
+	stroke: #333;
+	/*線の色なし*/
+}
 
 #top-logo {
-	animation: ani01 5s;
+	animation: ani01 7s;
 
-  }
+}
+
 #scroll {
-	animation: ani02 5.5s;
+	animation: ani02 7.5s;
+}
 
-  }
+#hajime {
+	opacity: 0;
+	animation: ani03 1.5s;
+}
+
+.box {
+	width: 100%;
+	/* 横幅いっぱい */
+	height: 300x;
+	/* 高さを300pxに指定 */
+	background: rgb(255, 255, 255);
+	/* 背景色を灰色にする */
+	margin: 0 0 50px;
+	/* 下方向に適度な余白 */
+	opacity: 0;
+	/* 初期値は透明にしておく */
+	transition: 1s;
+	/* 動くスピードを0.5秒に指定 */
+	position: relative;
+	/* 相対位置の設定 */
+	top: 50px;
+	/* 事前に下に50pxずらしておく */
+	text-align: center;
+}
+
+.active {
+	opacity: 1;
+	/* 透明度を元に戻す */
+	top: 0;
+	/* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
+.mida {
+	margin: 5px auto;
+	font-size: 30px;
+	color:rgb(44, 44, 44)
+}
+
+footer .copyright{
+    color: #202020;
+    font-size: 12px;
+    padding-top: 30px;
+    letter-spacing: 1px;
+	text-align: center;
+
+}

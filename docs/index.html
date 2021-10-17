@@ -7,106 +7,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/home.css">
   <title>グルメばこ~gourmet-baco~</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255,255,255,0.9)">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./">
-          <img src="./imgs/rogo1.png" height="60" class="d-inline-block align-text-top">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="https://sunabaco.com/" target="_blank">SUNABACOとは</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=ebetsu">北海道江別</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=takamatsu">香川県高松</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=fukuoka">福岡県天神</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=yatsushiro">熊本県八代</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=amakusa">熊本県天草</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="list.html?region=koza">沖縄県コザ</a>
-            </li>
-          </ul>
+    <div class="con_head">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255,255,255,0.9)">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">
+            <img src="./imgs/rogo1.png" height="60" class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://sunabaco.com/" target="_blank">SUNABACOとは</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=ebetsu">北海道江別</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=takamatsu">香川県高松</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=fukuoka">福岡県天神</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=yatsushiro">熊本県八代</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=amakusa">熊本県天草</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=koza">沖縄県コザ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html?region=online">オンライン</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>    
+      </nav> 
+    </div>    
   </header>  
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-  <script src="./js/home.js"></script>
   <div>
 
-<!--SVG-->
-<div class="svganimeblock"> 
+    <!--トップ画面の動き-->
+    <div class="svganimeblock">
 
-  <!-- SVGタグを自分で制作したSVGタグに差し替える svgにid="logoを付与"-->
-  <!-- <svg id="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="546px"
+      <!-- SVGタグを自分で制作したSVGタグに差し替える svgにid="logoを付与"-->
+      <!-- <svg id="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="546px"
      height="44.4px" viewBox="0 0 546 44.4" style="overflow:visible;enable-background:new 0 0 546 44.4;" xml:space="preserve"> -->
-     <svg id="logo" viewBox="100 0 600 600" style="overflow:visible;" >
-  <defs>
-  </defs>
-  <g>
-    <!-- 外枠 -->
-    <path class="st0" d="M136.3,368.7c-17.6-83.7,6.6-178.2,73.3-243.1C283.7,53.4,375,51.9,391.4,51.9c16.1,0,109.9,1.5,185.2,76.9
+      <svg id="logo" viewBox="100 0 600 600" style="overflow:visible;">
+        <text x="320" y="300" fill="#333" id="hajime">#すなばこーずハッカソン</text>
+        <text x="317" y="320" fill="#333" id="hajime">online Team Presents</text>
+        <defs>
+        </defs>
+        <g>
+          <!-- 外枠 -->
+          <path class="st0" d="M136.3,368.7c-17.6-83.7,6.6-178.2,73.3-243.1C283.7,53.4,375,51.9,391.4,51.9c16.1,0,109.9,1.5,185.2,76.9
     c14,14,68.9,72.2,75.8,165.2c8.8,118.6-67.7,196.4-77.7,206.3c-72.8,71.5-161.7,74.7-178.8,75c-19.2,0.3-102-0.4-174.9-63.2
-    C206.3,499.4,153.6,451,136.3,368.7z"/>
+    C206.3,499.4,153.6,451,136.3,368.7z" />
 
-  <!-- 内枠 -->
-  <path class="st0" d="M391.4,107c109.8,0.2,199.8,88.2,206.3,194.1c7.1,116.7-89.1,221.1-208.8,219.9
-	c-115.8-1.2-209.7-100.9-204.7-216.1C189,196,280.6,106.8,391.4,107z"/>
+          <!-- 内枠 -->
+          <path class="st0" d="M391.4,107c109.8,0.2,199.8,88.2,206.3,194.1c7.1,116.7-89.1,221.1-208.8,219.9
+	c-115.8-1.2-209.7-100.9-204.7-216.1C189,196,280.6,106.8,391.4,107z" />
 
-  <!-- フォーク -->
-  <path class="st0" d="M41.4,200.1l1.4,310.1c-0.1,1.6-0.3,9.1,5.4,15.4c7,7.8,17,7.1,18.1,6.9c2.2-0.3,8.8-1.4,14.5-6.9
+          <!-- フォーク -->
+          <path class="st0" d="M41.4,200.1l1.4,310.1c-0.1,1.6-0.3,9.1,5.4,15.4c7,7.8,17,7.1,18.1,6.9c2.2-0.3,8.8-1.4,14.5-6.9
 	c4.9-4.7,6.5-10.1,7.1-12.4c0.5-104.4,1-208.8,1.4-313.1c4.9-1.7,16.3-6.2,25.7-17.6c11.1-13.5,12.5-28.1,12.8-33.1
 	c0-37.2,0-74.3,0-111.5c-0.7-1.2-1.9-2.7-3.6-4c-3.8-3.1-8.1-3.5-9.8-3.5c-0.8-0.2-4.1-0.9-7.6,1c-3.8,2.1-4.9,5.8-5.1,6.5
 	c0,25.4,0.1,50.7,0.1,76.1c0,4.8-3.2,7.3-3.2,7.3l0,0c-0.8,0.7-3.4,3.3-6.7,4.1c-0.8,0.2-4.7,1.3-8.2-1c-4.1-2.7-4.1-7.9-4.1-8.4
 	c0-22.2,0-44.4-0.1-66.7l0-9.6c-0.1-0.8-0.9-4.7-4.5-7.3c-3.8-2.9-8-2.2-8.8-2.1c-0.9-0.1-4.2-0.4-7.6,1.6c-3.6,2.2-4.8,5.7-5,6.6
 	c-0.7,25.2-1.4,50.4-2.2,75.7c0.1,0.7,0.8,5.4-2.5,9.2c-2.9,3.3-6.9,3.6-8,3.7c-5.2,0.3-8.9-2.8-9.8-3.7c-3.1-2.7-4.2-6-4.6-7.4
 	c0.2-26.7,0.4-53.5,0.5-80.2c-0.4-1-1.4-3.5-4.1-5.3c-3.9-2.6-8.1-1.7-8.8-1.5c-1.7,0.3-4.9,1.1-8.1,3.6c-2.6,2-4.1,4.3-4.9,5.7
-	C1,74.7,0.5,111.4,0,148c0.4,5.4,2.2,18.6,12,31.4C22.6,193.4,36.4,198.5,41.4,200.1z"/>
+	C1,74.7,0.5,111.4,0,148c0.4,5.4,2.2,18.6,12,31.4C22.6,193.4,36.4,198.5,41.4,200.1z" />
 
-<!-- スプーン   -->
-<path class="st0" d="M695.4,206.5l0.4,319.7c0.3,1.9,1.5,7.8,6.8,12.5c6.8,6.1,15.2,5.5,16.6,5.3c2-0.2,8.7-0.9,14.5-6.4
+          <!-- スプーン   -->
+          <path class="st0" d="M695.4,206.5l0.4,319.7c0.3,1.9,1.5,7.8,6.8,12.5c6.8,6.1,15.2,5.5,16.6,5.3c2-0.2,8.7-0.9,14.5-6.4
 	c4.5-4.3,6-9.3,6.5-11.5c0.1-106.5,0.2-213.1,0.3-319.6c6.4-4.2,14.8-10.5,22.9-19.7c8.7-9.8,14.1-19.5,17.5-26.7
 	c1.7-15.2,2.3-35.8-2-59.6c-2.8-15.3-7-28.4-11.2-39c-2.7-4.4-9.6-14.2-22.6-20.8c-11.6-5.9-22.2-6.3-27.4-6.2c-5.5,0-16.3,0.9-28,7
 	c-10.5,5.5-16.9,12.8-20.1,17.1c-5.1,10.8-10.7,25.6-13.8,43.7c-4.3,24.6-2.5,45.5-0.1,59.4c1.2,5.4,4.5,16.6,13.9,27.3
-	C679.2,200.1,690.2,204.7,695.4,206.5z"/>
+	C679.2,200.1,690.2,204.7,695.4,206.5z" />
 
-  <!-- <img id="top-logo" src = "./imgs/rogo1.png"> -->
-  <image xlink:href="./imgs/rogo1.png" transform="translate(270 250)" id="top-logo"/>
-  <text x="350" y="380" fill="#333" id="scroll">↓ scrool ↓</text>
-  </g>
+          <!-- <img id="top-logo" src = "./imgs/rogo1.png"> -->
+          <image xlink:href="./imgs/rogo1.png" transform="translate(270 250)" id="top-logo" />
+          <text x="350" y="380" fill="#333" id="scroll">↓ scrool ↓</text>
+        </g>
 
-  </svg>
-   
-      
+      </svg>
+
+
+    </div>
+    <div class="box fadeIn">
+      <span class="mida">グルメばこ ～gourmet-baco～</span><br>
+      <p>昔SUNABACOのGitHub練習で使っていた<a href="https://shataku.github.io/gourmet/">グルメ紹介サイト</a>を参考に、<br>
+        SUNABACOのある地域とオンラインで参加している人の地域のグルメサイトを作り、<br>SUNABACO関係者が行ったことのない土地でも楽しめ、関りを深くする手助けできるサイトを作りました。<br>
+        データのUPには、Gitの練習にもなる！おまけつき！</p>
+    </div>
+    <div class="box fadeIn">
+      <span class="mida">SUNABACOを拠点としている情報</span><br>
+      <p>SUNABACOを拠点としてデータを集めているので遊びに行ったついでに行ける！<br>
+        その地域のファンになってもらうことはもちろん、地域の方々とも交流を深めてもらいたいので<br>
+        口コミ情報なども取り入れました！</p>
+    </div>
+    <div class="box fadeIn">
+      <span class="mida">みんなが苦手としているGitの練習に！</span><br>
+      <p>データの追加はGitでテキストデータ、写真共にあげて簡単に反映されるようにしてあります！<br>
+        地域、お店の名前、コメント、写真を教えて頂ければすぐにあげれます！<br>
+        GPSデータもあれば、Googleマップとの連携も！</p>
+    </div>
+
+    <div class="box fadeIn">
+      <span class="mida">詳しいグルメ情報は画面上部のメニューから！</span><br>
+      <p>各地域のすぐにでも行きたくなる、家族や友達と行きたくなる情報をあなたへ！<br>
+        下調べもいいですし、現地に行ってからの検索でも！<br>
+        ぜひ、お使いください！</p>
+    </div>
+
+  <footer>
+      <p class="copyright">Copyright &copy; ＃すなばこーずハッカソン online Team 2021 all rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
   <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/9-4-1/js/9-4-1.js"></script>
+  <script src="./js/home.js"></script>  
 
-</div>
-test1
 </body>
 
 </html>
