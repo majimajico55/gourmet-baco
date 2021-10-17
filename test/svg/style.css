@@ -1,0 +1,42 @@
+@charset "utf-8"; 
+
+/*=============== レイアウトのためのCSS =================*/
+
+a{
+  color:#333;
+}
+
+.svganimeblock{
+  margin:100px auto;
+  text-align: center;
+}
+
+p{margin:20px 0 0 0;}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*SVGの横幅*/
+.svganimeblock{
+  max-width:1200px;
+  width:100%;
+}
+
+/*SVGの可変*/
+.svganimeblock svg{
+  width:100%;
+}
+
+/*アニメーション前のパスの指定*/
+.svganimeblock svg path {
+    fill-opacity: 0;/*最初は透過0で見えない状態*/
+    transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: none;/*塗りがない状態*/
+    stroke: #333;/*線の色*/
+  }
+
+/*アニメーション後に.doneというクラス名が付与された時のパスの指定*/
+.svganimeblock svg.done path{
+    fill: none;/*塗りの色*/
+    fill-opacity: 1;/*透過1で見える状態*/
+    stroke: #333;/*線の色なし*/
+  }
