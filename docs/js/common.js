@@ -39,3 +39,9 @@
   return JSON.parse(fileData);
 };
 
+$(function() {
+  window.onerror = function(errorMessage, filePath, rowNumber, columnNumber, errorObject) {
+    console.error(errorMessage, filePath, rowNumber, columnNumber, errorObject);
+    window.location.href = "error.html";
+  };
+})

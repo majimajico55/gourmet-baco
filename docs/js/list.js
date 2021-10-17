@@ -25,8 +25,15 @@ $(async function() {
   // テンプレート取得
   const template = $($("template").html());
 
+  // 追加フラグ
+  let isAppend = false;
+
   // 取得したデータをテンプレートの所定の項目に入れていく
   for (const item of data) {
+
+    if (!item.title) {
+      continue;
+    }
 
     const _template = template.clone();
 
@@ -51,6 +58,12 @@ $(async function() {
     // 子要素として追加
     $("#list").append(_template);
 
+    isAppend = true;
+  }
+
+  if (!isAppend) {
+    // TODO: エラー画面に飛ばす
+    throw new Error();
   }
 
 });
