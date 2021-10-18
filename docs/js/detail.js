@@ -41,9 +41,28 @@ $(function() {
     template.find(".title").text(data.title);
     template.find(".description").text(data.description);
     template.find(".descriptionDetail").text(data.descriptionDetail);
-    template.find(".author").text(data.author);
-    template.find(".author").attr("href", `https://twitter.com/${data.author.substring(1)}`);
     template.find("#btnBack").attr("href", `list.html?region=${region}`);
+
+    if (Array.isArray(data.author)) {
+      let isAdd = false;
+      const authorTemplate = template.find(".author").clone()
+      for (const authorItem of data.author) {
+        const author = authorTemplate.clone();
+        if (isAdd) {
+          author.text(authorItem);
+          author.attr("href", `https://twitter.com/${authorItem.substring(1)}`);
+
+          template.find(".author").parent().append(author, '\n');
+        } else {
+          template.find(".author").text(authorItem);
+          template.find(".author").attr("href", `https://twitter.com/${authorItem.substring(1)}`);
+          isAdd = true;
+        }
+      }
+    } else {
+      template.find(".author").text(data.author);
+      template.find(".author").attr("href", `https://twitter.com/${data.author.substring(1)}`);
+    }    
 
     // カルーセルに画像を追加
     for (const [index, item]  of data.images.entries()) {

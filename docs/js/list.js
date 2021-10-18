@@ -40,7 +40,19 @@ $(async function() {
     _template.find(".thumbnail").attr("src", `data/${region}/${item.dir}/${item.thumbnail}`);
     _template.find(".title").text(item.title);
     _template.find(".description").text(item.description);
-    _template.find(".author").text(item.author);
+
+    let author = "";
+    if (Array.isArray(item.author)) {
+      for (const authorItem of item.author) {
+        if (author) {
+          author += ", ";
+        }
+        author += authorItem;
+      }
+    } else {
+      author = item.author;
+    }
+    _template.find(".author").text(author);
 
     // アイコンオブジェクトを追加
     if (item.category === "gourmet") {
